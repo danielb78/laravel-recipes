@@ -33,7 +33,7 @@ class AuthController extends Controller
             if(is_null($user)) {
                 $user = new User();
                 $user->name = $data->user['name'];
-                $user->facebook_id = $data->id;
+                $user->facebook_id = $data->email;
                 $user->email = $data->email;
                 $user->password = Hash::make(str_random(8));
 
