@@ -14,3 +14,8 @@
 Route::get('/', 'PagesController@home');
 Route::get('about', 'PagesController@about');
 Route::get('contact', 'PagesController@contact');
+
+Route::group(['middleware' => ['web']], function () {
+    Route::get('login/facebook', 'Auth\AuthController@redirectToFacebook');
+    Route::get('login/facebook/callback', 'Auth\AuthController@getFacebookCallback');
+});
