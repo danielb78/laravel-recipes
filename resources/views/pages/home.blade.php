@@ -8,6 +8,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">Dashboard</div>
                     <div class="panel-body">
+                        <div><img src="/images/laravel-recipes.jpg" width="100%"/></div>
                         <form method="POST" action="/upload" enctype="multipart/form-data">
                             @foreach ($errors->all() as $error)
                                 <p class="alert alert-danger">{{ $error }}</p>
