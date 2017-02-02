@@ -10,7 +10,8 @@
         "intervention/image": "^2.3",
         "laravel/framework": "5.4.*",
         "laravel/socialite": "^3.0",
-        "laravel/tinker": "~1.0"
+        "laravel/tinker": "~1.0",
+        "raveren/kint": "^1.0"
     },
     "require-dev": {
         "mockery/mockery": "0.9.*",
