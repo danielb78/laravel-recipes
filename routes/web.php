@@ -17,10 +17,13 @@ Route::get('contact', 'PagesController@contact');
 
 Route::get('blog', 'BlogController@index');
 
+Route::get('blog.json', function() {
+    return App\Post::paginate(5);
+});
+
 Route::get('login/facebook', 'Auth\AuthController@redirectToFacebook');
 Route::get('login/facebook/callback', 'Auth\AuthController@getFacebookCallback');
 
 Route::post('upload', 'ImagesController@store');
-
 
 Auth::routes();
